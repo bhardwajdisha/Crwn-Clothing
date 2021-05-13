@@ -6,6 +6,8 @@ import './header.scss'
 
 import {ReactComponent as Logo} from '../../asset/crown.svg'
 import {auth} from '../../firebase/firebase.utlils'
+import CartIcon from '../cart-icon/cart-icon'
+import CartDropdown from '../cart-dropdown/cart-dropdown'
 
 const Header = ({currentUser}) => {
     return (
@@ -23,10 +25,13 @@ const Header = ({currentUser}) => {
                     <div className='option' onClick={()=>auth.signOut()}>SIGN OUT</div>
                      :
                      <Link className="option" to='/signIn'>SIGN IN</Link>  
-                 }        
+                 } 
+                <CartIcon className="option icon"/>  
             </div>
-            
+            <CartDropdown />
         </div>
+           
+        
     )
 }
 
