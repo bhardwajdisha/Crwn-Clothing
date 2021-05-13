@@ -10,8 +10,8 @@ const Collection = ({category}) => {
                 {
                     category.items
                         .filter((item,index)=> index<4 )
-                        .map(({id,...otherItemsProps})=>{
-                            return <CollectionItem key={id} {...otherItemsProps}/>
+                        .map((item)=>{
+                            return <CollectionItem  key ={item.id} item={item}/>
                         })
                 }
             </div>
