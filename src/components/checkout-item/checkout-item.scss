@@ -21,6 +21,18 @@
         width:23%;
     }
 
+    .quantity{
+      display: flex;
+
+      .value{
+        margin: 0 10px;
+      }
+
+      .arrow{
+        cursor:pointer;
+      }
+    }
+
     .remove-button{
       cursor: pointer;
     }
